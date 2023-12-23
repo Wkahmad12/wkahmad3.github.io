@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="kk.js"></script>
+    <link rel="stylesheet" href="kk.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAbZJREFUWEft2LFLV1EYxvGPSZFG1Bb6D7jo0hARUUNLQwjuOekmREPUEFJBDUVLU0tNtQfRYEODFCEOTi7+AQptUqIRlHFCl9M995x7f1cQ+Z31PO/zfnk5POeeO+CQrYFDxuNIAo3jM3ZxBau9TL3XCY1iBef2IL7hPDbaQvUCdBZLGIuar+EiNttAtQU6iUVcSDRdxlX8bArVBmgQH3A902wBN/C7CVQboDe4WdjkLaYLtf9kTYEe436TBgg186U1TYBm8KrUONLN4nVJbSnQJN7hWIlpheYPpvA+V18CdBmfcCJnltn/hWv4UqfLAYUU/orTPcLsl//Apbo0rwOKU7gjJrVpngJKpXBXUMk0rwLKpXBXUJVpHgOVpnBXUP+leQz0Are66lboE3re3tfGQFs4VWjUlew7zqSA7uBJB5lTChu+BsK18jwFFBs9xINS90LdIwTfypULxj7QkZtQOA9Vq+7cHegZSk04PIlSqw8UJtOfUC5YD2xCd/E0cTp3MJzY28ZQYu8enrVN6gl8xEhkEL6PwwtkLmH8EuGVcjzaX997YCZ/SOSCsfB66k7WB8rN8i/0SFUl+LSAigAAAABJRU5ErkJggg=="/>LiteraryLoom</a>
+        <ul class="navbar">
+        <li> <a href="#home" class="active">Home</a>
+         <li><a href="#about">About</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#OUR CUSTOMER">Review</a></li>
+         <li><a href="#contact us">Contact </a></li>
+
+        </ul>
+        <div class="nav-icon">
+
+           <a href="#" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAH1JREFUWEft1UEKwCAMBVG9eW9ecdeFONQgJDDdhkj6/Gpvyb6ebJ7mQLQjCilEAlQvlaGX/iZYX2LshBxoipfKUDAiZ+0KkdtO6KHmYH25vsf+o/r7Yky3ZcGInLV77MmtlJCvPb326YQof1fqpUJ9RYAWVUghEqC6GSKhAeG2CiXgqE5rAAAAAElFTkSuQmCC" alt="Menu" id="menu"></a>
+             <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAvdJREFUWEft10voVVUUBvCfIAVFg0KKlApLssamDaSIHmBQRJmUIYllg6RZhBJRg4geNArSlF6DHqAFhRIihJoFgRVNih4oBhFBZhIWKJbxyT5yOl3vPvf+wf8/cM322Xt9+7tr7bXWd6eZYjZtivHxvyZ0Hu7EbZiDmSW6P+E7vI938dtEot4nQhfjMSzHGZXLDuMVPI0fxyFWI7QEb/Qg0r37T9yFLaOSGkZoNZ7pAH6C97AL35a9K3AtFmNB5/yDeGkUUicjtBRvtYC+wQp8WgFfhA24qJw7hlvwQV9Sgwhdhq9wZgH5EjfgQE/QC7EDl5fzvyOY+/v4DyKUSrmjOO/B1fi1D1jrzCx8jgvKt3VY1QejS+hKfN1ynI/P+gANOJNUbS7fjyKRq0apSyjl/WQByeO9fUwyjdtuXFUW9+G1Gl6X0MdYWJzuwds1gMr+w3i+nNlYWsFQly6hfbikeKRSxmpurRvntVL+BbIeidAfOKt4pMqO1AAq++e2qvMgsh6J0CGcXTzOQdYTsWCk7GO/4PwaWDdl35fBGb+5ZWjWMIbtt6t2J66rgXUJfYjri9PKMihrGMP2MzrWlgO9elGX0CN4rgBsxc0TYYPtrag8hBdreF1C0TlJW2PXIK1gHLsJ24pjiiXYP9eABo2OTUWIxfeH0tiqHbZzUcRbmmIj4tbg2RqZ7A8idGkZHxMZrklViiK2F3ncvVpIX/mR+RbFWJtrkR/RP01zDaEUSr5nnlVtmEB7FE91ED4qAi3vKjo6/vn1KecItJN14ndwN/6qMapJ2ETlZUyvAXX2I/QjP25sfc8si/D7exhWjVB8Z+NxLOtBLGlJaT9ROnRUZyLT2Ju4dxipPoQasBllWt+KPPxUUAjk0WYoR8xFvrbbRvBfLyQanPwreQCRt/+xUQiNmLUTxweRehX3Txahpr2sL5FpeAwcJaciQu1AJKVJVyx/JlPJ/7JTTSiXv1CEXzMzJ53Q0Lc4GRE6TWjc9nDcb8ql7B8fdYIl8rnHKgAAAABJRU5ErkJggg=="/></a>
+        </div>
+       
+    </header>
+    <section class="home" id="home">
+          <div class="home-text">
+            <h1>MEET ,<SPAn>READ &</SPAn> ENJOY THE TRUE <span>TASTE</span></h1>
+                <a href="sign.html" class="btn">Explore me </a>
+          </div>
+
+          <div class="home-image">
+            <img src="R.jpeg" width="300">
+          </div>
+    </section>
+    
+    </section>
+    <section class="About" id="about">
+        <div class="about-image">
+            <img src="OIP 2222.jpeg" alt="" width="300">
+        </div>
+        <div class="About-text">
+
+        
+        <h2>A room without books is like  <br> a body without a soul.</h2>
+           <p>Reading books may have several physical and mental benefits. These include strengthening your brain, increasing your ability to empathize, reducing stress, and b…
+            In the 11th century, a Japanese woman known as Murasaki Shikibu wrote “The Tale of Genji,”
+            Reading is a multifaceted process involving word recognition, comprehension, fluency, and motivation. </p>
+            <a href="#" class="btn">Read More  </a></div>
+    </section>
+    <section class="shop" id="shop">
+        <div class="shop-pic">
+            <img src="e.jpeg" alt="" width="200">
+            <h3>Diary of wipekids</h3>
+            <div class="in-text">
+                <div class="price">
+                    <h6>23.00$</h6>
+                </div>
+                <div class="s-btn">
+                    <a href="sign.html">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="shop-pic">
+            <img src="OIP (2).jpeg" width="200">
+            <h3>FIRE AND BLOOD</h3>
+            <div class="in-text">
+                <div class="price">
+                    <h6>23.00$</h6>
+                </div>
+                <div class="s-btn">
+                    <a href="sign.html">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="shop-pic">
+            <img src="opoi.jpeg" width="200">
+            <h3>GOD OF WAR</h3>
+            <div class="in-text">
+                <div class="price">
+                    <h6>23.00$</h6>
+                </div>
+                <div class="s-btn">
+                    <a href="sign.html">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="shop-pic">
+            <img src="er.jpeg" alt="" width="200" height="100">
+            <h3>HARRY POTTER</h3>
+            <div class="in-text">
+                <div class="price">
+                    <h6>23.00$</h6>
+                </div>
+                <div class="s-btn">
+                    <a href="sign.html">Buy Now</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="shop-pic">
+            <img src="when.jpg" alt="" width="200">
+            <h3>WHEN WATER BURNS</h3>
+            <div class="in-text">
+                <div class="price">
+                    <h6>23.00$</h6>
+                </div>
+                <div class="s-btn">
+                    <a href="sign.html">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="shop-pic">
+            <img src="rrre.jpeg" width="200">
+            <h3>ROMEO & JULET</h3>
+            <div class="in-text">
+                <div class="price">
+                    <h6>103.00$</h6>
+                </div>
+                <div class="s-btn">
+                    <a href="sign.html">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="shop-pic">
+            <img src="w.jpeg" width="200">
+            <h3>LOVE</h3>
+            <div class="in-text">
+                <div class="price">
+                    <h6>100.00$</h6>
+                </div>
+                <div class="s-btn">
+                    <a href="sign.html">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="shop-pic">
+            <img src="fire.jpeg" alt="" width="200" height="100">
+            <h3>FIRE</h3>
+            <div class="in-text">
+                <div class="price">
+                    <h6>23.00$</h6>
+                </div>
+                <div class="s-btn">
+                    <a href="sign.html">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="review" id="OUR CUSTOMER">
+        <div class="customer-review">
+            <div class="review-box">
+                <h3>Customer Review 1</h3>
+                <p>After reading the book, I was truly impressed by the depth of the story and the well-developed characters. The author's writing style is captivating, and I couldn't put the book down until I finished it. Highly recommended!</p>
+            </div>
+        </div>
+    
+        <div class="customer-review">
+            <div class="review-box">
+                <h3>Customer Review 2</h3>
+                <p>This book exceeded my expectations! The plot twists kept me on the edge of my seat, and the emotional journey of the characters resonated with me. I'm already looking forward to the author's next work.</p>
+            </div>
+        </div>
+    </section>
+    
+
+      <section class="contact" id="contact-us">
+        <div class="contact-container">
+          <h2>Contact <span>us</span></h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class='bx bxs-envelope'></i>
+              <p>Email: info@literaryloom.com</p>
+            </div>
+            <div class="contact-item">
+              <i class='bx bxs-phone'></i>
+              <p>Contact: +1 123 456 7890</p>
+            </div>
+            <div class="contact-item">
+              <i class='bx bxs-user'></i>
+              <p>Name: Literary Loom Support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="copyright">
+        <div class="copyright-container">
+          <p>&copy; 2023 Literary Loom. All rights reserved. | Designed by Your Name</p>
+          <p>Follow us on <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA3pJREFUWEft12nIbXMUBvDfNYZ8IWOUZCZTSaQMkSn5YL5JEspUMhQyDxFCMmRKIjNRihBSppB5CqWIwkckc4/WuW377rP3Pvf4cD/cVafe89/rv/bzrvWsZ62zwFJmC5YyPJYBGqrILBnaBjtgIyw/FLie/4mv8A4+HHNnDKCjcCk2GROwx+dznI+H++L0AVoP92CfOYG0rz+HY/FtV9w+QM9g37r0Ku7G25X630eCXBnbYWecjC3q3tM4YBZAh+DRunAerhwJoM9tJdyAk8rpUDzWvjAtQ6l3OJN6HzEHmD2xEOvgqcryW9gWnzUytugVXYC2wkflsTtengPQKbipVaajcW+dbYhvmvG7ADXLlTRP48vqOBO7YHv8jXfxOq7Bz5XdB+uFaZCQOZlPBWIHVeZ6M5Qa34IfsdaU7OxdHbj+lOdf4xi8hMjG2pX157Eafqp7yWDe1QvobFyNL7Bpxwv3wIuN8xfwPlZAyr1X49lueKUVI1X5q87OxVVDgC4oIfygyNf0T5k+xgaVwRA2utK0SMX9WKNUemv80vL5o9T+Qlw2BOhiXIR0w06tQMfjjjqLjkRPuiwt/Ug9SOkmJJ74hpfJ6ChAl5RjyBnCNu0uHIfXsOsUMJPjzK+Q/dYSxab7r4hojgKUuZWyvVcBm4E+Ke1IK582AOh2nDAlTjpw1aJGqrHIutp+UrJPsWXrpTnbHDfj1AFAt+HE4lx41LR0Wbot/EmWRgEKeduBHsCRpTXtcrbxRZMyx8Kf8KhpIfkqyD8fiiwxoHMac20xUWvEPRwP1fczcH0L0G9Ysahx+RCg1DTIu0q2bk37NfEDMgaebb1sf9xXbf9dSUdEdmLLIYtbbLHB3cWhOF2BL6csZfu12r1PGCOSTRENiJA5pI5l9Fw3lKH/e3S0udUcHdmRIgu9HDoYT9SwjFb0DdeMmSxf2bUzDtrDtQ0m3zeu7OfvDPLHhwBlq4vexOZdP7oANdeP/HCYrDr/+g4taCHsZI3tCj7rWcbFmyW439fi9p8Y0wAd2NhTohP5ZN+Zx9orbOdq3LfkZ309rBC8gTtryc8WkGk9xiZLfob06Y2uTYwdu+L0AUp7XttYyscAGOOTLSDd1dSm3i5rBw2HbsRmY97W45OF7yw82RdnzC/Xyf2l5qf0nImZ7fosGZot8hJ6LwM0lLh/ALGquSVVFOHaAAAAAElFTkSuQmCC"/></a> instgram and facebook<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA3pJREFUWEft12nIbXMUBvDfNYZ8IWOUZCZTSaQMkSn5YL5JEspUMhQyDxFCMmRKIjNRihBSppB5CqWIwkckc4/WuW377rP3Pvf4cD/cVafe89/rv/bzrvWsZ62zwFJmC5YyPJYBGqrILBnaBjtgIyw/FLie/4mv8A4+HHNnDKCjcCk2GROwx+dznI+H++L0AVoP92CfOYG0rz+HY/FtV9w+QM9g37r0Ku7G25X630eCXBnbYWecjC3q3tM4YBZAh+DRunAerhwJoM9tJdyAk8rpUDzWvjAtQ6l3OJN6HzEHmD2xEOvgqcryW9gWnzUytugVXYC2wkflsTtengPQKbipVaajcW+dbYhvmvG7ADXLlTRP48vqOBO7YHv8jXfxOq7Bz5XdB+uFaZCQOZlPBWIHVeZ6M5Qa34IfsdaU7OxdHbj+lOdf4xi8hMjG2pX157Eafqp7yWDe1QvobFyNL7Bpxwv3wIuN8xfwPlZAyr1X49lueKUVI1X5q87OxVVDgC4oIfygyNf0T5k+xgaVwRA2utK0SMX9WKNUemv80vL5o9T+Qlw2BOhiXIR0w06tQMfjjjqLjkRPuiwt/Ug9SOkmJJ74hpfJ6ChAl5RjyBnCNu0uHIfXsOsUMJPjzK+Q/dYSxab7r4hojgKUuZWyvVcBm4E+Ke1IK582AOh2nDAlTjpw1aJGqrHIutp+UrJPsWXrpTnbHDfj1AFAt+HE4lx41LR0Wbot/EmWRgEKeduBHsCRpTXtcrbxRZMyx8Kf8KhpIfkqyD8fiiwxoHMac20xUWvEPRwP1fczcH0L0G9Ysahx+RCg1DTIu0q2bk37NfEDMgaebb1sf9xXbf9dSUdEdmLLIYtbbLHB3cWhOF2BL6csZfu12r1PGCOSTRENiJA5pI5l9Fw3lKH/e3S0udUcHdmRIgu9HDoYT9SwjFb0DdeMmSxf2bUzDtrDtQ0m3zeu7OfvDPLHhwBlq4vexOZdP7oANdeP/HCYrDr/+g4taCHsZI3tCj7rWcbFmyW439fi9p8Y0wAd2NhTohP5ZN+Zx9orbOdq3LfkZ309rBC8gTtryc8WkGk9xiZLfob06Y2uTYwdu+L0AUp7XttYyscAGOOTLSDd1dSm3i5rBw2HbsRmY97W45OF7yw82RdnzC/Xyf2l5qf0nImZ7fosGZot8hJ6LwM0lLh/ALGquSVVFOHaAAAAAElFTkSuQmCC"/></p>
+    </footer>
+        </div>
+      </section>
+     <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    var menu = document.getElementById('menu');
+    var navbar = document.getElementById('navbar');
+
+    // Add a click event listener to the menu icon
+    menu.addEventListener('click', function () {
+        // Toggle the "active" class on the navbar
+        navbar.classList.toggle('active');
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+           
+
+            // Add fade-in effect to home page text
+            var homeText = document.querySelector('.home-text');
+            homeText.classList.add('fade-in');
+        });
+</script>
+      
+</body>
+</html> 
